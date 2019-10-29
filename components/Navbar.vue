@@ -3,7 +3,9 @@
     <div class="column is-10 is-offset-1">
       <nav class="navbar has-shadow">
         <div class="navbar-brand">
-          <a class="navbar-item is-title" href="/">{{ title }}</a>
+          <nuxt-link class="navbar-item is-size-4" to="/">{{
+            title
+          }}</nuxt-link>
           <a
             :class="{ 'is-active': isHamburgerActive }"
             role="button"
@@ -19,8 +21,8 @@
         </div>
         <div :class="{ 'is-active': isHamburgerActive }" class="navbar-menu">
           <div class="navbar-end">
-            <a class="navbar-item" href="/">{{ articles }}</a>
-            <a class="navbar-item" href="/about">{{ about }}</a>
+            <nuxt-link class="navbar-item" to="/">{{ articles }}</nuxt-link>
+            <nuxt-link class="navbar-item" to="/about">{{ about }}</nuxt-link>
           </div>
         </div>
       </nav>

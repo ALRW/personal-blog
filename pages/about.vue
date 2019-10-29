@@ -1,5 +1,5 @@
 <template>
   <div class="container">
-    <h1>Blog Page</h1>
+    <h1>About Me Page</h1>
   </div>
 </template>
