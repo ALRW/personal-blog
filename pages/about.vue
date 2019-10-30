@@ -1,5 +1,12 @@
 <template>
-  <div class="container">
-    <h1>About Me Page</h1>
-  </div>
+  <profile />
 </template>
+
+<script>
+import Profile from '../components/Profile'
+export default {
+  components: {
+    Profile
+  }
+}
+</script>

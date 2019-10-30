@@ -1,7 +1,9 @@
 <template>
-  <div>
-    <Navbar />
-    <nuxt />
+  <div class="columns">
+    <div class="column is-10 is-offset-1">
+      <navbar />
+      <nuxt />
+    </div>
   </div>
 </template>
 
