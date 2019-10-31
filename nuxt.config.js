@@ -1,3 +1,13 @@
+import hljs from 'highlight.js'
+import glob from 'glob'
+
+const files = glob.sync(`**/*.md`, { cwd: `articles` })
+
+function getSlugs(post, _) {
+  const slug = post.substr(0, post.lastIndexOf(`.`))
+  return `/blog/${slug}`
+}
+
 export default {
   mode: 'universal',
   /*
@@ -45,8 +55,23 @@ export default {
   modules: [
     // Doc: https://github.com/nuxt-community/modules/tree/master/packages/bulma
     '@nuxtjs/bulma',
-    '@nuxtjs/pwa'
+    '@nuxtjs/pwa',
+    '@nuxtjs/markdownit'
   ],
+  /*
+   ** Markdownit configuration
+   */
+  markdownit: {
+    injected: true,
+    highlight(str, lang) {
+      if (lang && hljs.getLanguage(lang)) {
+        try {
+          return hljs.highlight(lang, str).value
+        } catch (__) {}
+      }
+      return ''
+    }
+  },
   /*
    ** Build configuration
    */
@@ -56,6 +81,11 @@ export default {
         features: {
           customProperties: false
         }
+      }
+    },
+    generate: {
+      routes() {
+        return files.map(getSlugs)
       }
     },
     /*
