@@ -5,7 +5,7 @@
         <div class="content">
           <p>Hi I'm Andrew, and thanks for visiting my blog</p>
           <p>
-            5 years ago I left the British Army and started a new career as a
+            Five years ago I left the military and started a new career as a
             software engineer. I now work as an engineering manager at Funding
             Circle helping small businesses and savers find a mutually
             beneficial way to grow financially.
@@ -17,6 +17,12 @@
             </span>
             where we provide cutting edge tech solutions, training and advice to
             small businesses.
+          </p>
+          <p>
+            I write about a range of subjects but focus on technology,
+            leadership, productivity and their intersection. If you would like
+            to keep up to date with my work please just enter your email below
+            and i'll be in touch whenever I have something of value to share.
           </p>
         </div>
       </div>
