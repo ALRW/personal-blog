@@ -17,11 +17,6 @@
 </template>
 
 <style>
-@import url('https://fonts.googleapis.com/css?family=Cookie&display=swap');
-.reasontree {
-  text-decoration: none;
-  font-family: 'Cookie', cursive;
-}
 .footer {
   background: white;
   border-top: 2px solid whitesmoke;

@@ -29,11 +29,3 @@
     </div>
   </section>
 </template>
-
-<style>
-@import url('https://fonts.googleapis.com/css?family=Cookie&display=swap');
-.reasontree {
-  text-decoration: none;
-  font-family: 'Cookie', cursive;
-}
-</style>
