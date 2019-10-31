@@ -1,17 +1,21 @@
 <template>
-  <div v-html="content"></div>
+  <section class="section">
+    <div class="columns">
+      <div class="column is-8 is-offset-2">
+        <div class="content">
+          <div v-html="post.html"></div>
+        </div>
+      </div>
+    </div>
+  </section>
 </template>
 
 <script>
-import fm from 'front-matter'
-
 export default {
   async asyncData({ params }) {
-    const fileContent = await import(`~/articles/${params.post}.md`)
-    const page = fm(fileContent.default)
+    const post = await import(`~/articles/${params.post}.md`)
     return {
-      frontmatter: page.attributes,
-      content: page.body
+      post
     }
   }
 }

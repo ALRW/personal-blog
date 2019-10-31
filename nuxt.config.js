@@ -1,4 +1,4 @@
-import hljs from 'highlight.js'
+import path from 'path'
 import glob from 'glob'
 
 const files = glob.sync(`**/*.md`, { cwd: `articles` })
@@ -55,23 +55,8 @@ export default {
   modules: [
     // Doc: https://github.com/nuxt-community/modules/tree/master/packages/bulma
     '@nuxtjs/bulma',
-    '@nuxtjs/pwa',
-    '@nuxtjs/markdownit'
+    '@nuxtjs/pwa'
   ],
-  /*
-   ** Markdownit configuration
-   */
-  markdownit: {
-    injected: true,
-    highlight(str, lang) {
-      if (lang && hljs.getLanguage(lang)) {
-        try {
-          return hljs.highlight(lang, str).value
-        } catch (__) {}
-      }
-      return ''
-    }
-  },
   /*
    ** Build configuration
    */
@@ -91,6 +76,12 @@ export default {
     /*
      ** You can extend webpack config here
      */
-    extend(config, ctx) {}
+    extend(config, _) {
+      config.module.rules.push({
+        test: /\.md$/,
+        include: path.resolve(__dirname, `articles`),
+        loader: `frontmatter-markdown-loader`
+      })
+    }
   }
 }
