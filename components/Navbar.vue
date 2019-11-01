@@ -15,7 +15,11 @@
         <span aria-hidden="true"></span>
       </a>
     </div>
-    <div :class="{ 'is-active': isHamburgerActive }" class="navbar-menu">
+    <div
+      :class="{ 'is-active': isHamburgerActive }"
+      class="navbar-menu"
+      @click="isHamburgerActive = false"
+    >
       <div class="navbar-end">
         <nuxt-link class="navbar-item" to="/">{{ articles }}</nuxt-link>
         <nuxt-link class="navbar-item" to="/about">{{ about }}</nuxt-link>
