@@ -5,21 +5,10 @@ import hljs from 'highlight.js'
 
 const md = markdownIt({
   highlight(str, lang) {
-    if (lang && hljs.getLanguage(lang)) {
-      try {
-        return hljs.highlight(lang, str).value
-      } catch (__) {}
-    }
+    if (lang && hljs.getLanguage(lang)) return hljs.highlight(lang, str).value
     return ''
   }
 })
-
-const files = glob.sync(`**/*.md`, { cwd: `articles` })
-
-function getSlugs(post, _) {
-  const slug = post.substr(0, post.lastIndexOf(`.`))
-  return `/blog/${slug}`
-}
 
 export default {
   mode: 'universal',
@@ -83,7 +72,10 @@ export default {
     },
     generate: {
       routes() {
-        return files.map(getSlugs)
+        const files = glob.sync(`**/*.md`, { cwd: `articles` })
+        return files.map(
+          (post) => `/blog/${post.substr(0, post.lastIndexOf(`.`))}`
+        )
       }
     },
     /*
