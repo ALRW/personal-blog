@@ -18,7 +18,8 @@
     "frontmatter-markdown-loader": "^3.0.0",
     "highlight.js": "^9.16.1",
     "markdown-it": "^10.0.0",
-    "nuxt": "^2.0.0"
+    "nuxt": "^2.0.0",
+    "nuxt-webfontloader": "^1.1.0"
   },
   "devDependencies": {
     "@nuxtjs/eslint-config": "^1.0.1",
