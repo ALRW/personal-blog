@@ -1,5 +1,18 @@
 import path from 'path'
 import glob from 'glob'
+import markdownIt from 'markdown-it'
+import hljs from 'highlight.js'
+
+const md = markdownIt({
+  highlight(str, lang) {
+    if (lang && hljs.getLanguage(lang)) {
+      try {
+        return hljs.highlight(lang, str).value
+      } catch (__) {}
+    }
+    return ''
+  }
+})
 
 const files = glob.sync(`**/*.md`, { cwd: `articles` })
 
@@ -37,7 +50,7 @@ export default {
   /*
    ** Global CSS
    */
-  css: ['@/assets/css/main.css'],
+  css: ['@/assets/css/main.css', 'highlight.js/styles/darcula.css'],
   /*
    ** Plugins to load before mounting the App
    */
@@ -80,7 +93,10 @@ export default {
       config.module.rules.push({
         test: /\.md$/,
         include: path.resolve(__dirname, `articles`),
-        loader: `frontmatter-markdown-loader`
+        loader: `frontmatter-markdown-loader`,
+        options: {
+          markdown: (body) => md.render(body)
+        }
       })
     }
   }

@@ -16,7 +16,8 @@
     "@nuxtjs/bulma": "^1.2.1",
     "@nuxtjs/pwa": "^3.0.0-0",
     "frontmatter-markdown-loader": "^3.0.0",
-    "highlight.js": "^9.15.10",
+    "highlight.js": "^9.16.1",
+    "markdown-it": "^10.0.0",
     "nuxt": "^2.0.0"
   },
   "devDependencies": {
