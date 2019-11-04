@@ -16,7 +16,6 @@ export default {
       const doc = await import(`~/articles/${fileName}.md`)
       return doc.attributes
     }
-
     return Promise.all(Posts.map((post) => asyncImport(post))).then((res) => ({
       posts: res
     }))

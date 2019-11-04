@@ -1,7 +1,7 @@
 <template>
   <section class="section is-flex">
     <div>
-      <figure class="image">
+      <figure class="image personal-profile">
         <img
           class="is-rounded"
           src="~assets/images/personal-profile.jpg"
@@ -16,7 +16,7 @@
 </template>
 
 <style>
-.image {
+.personal-profile {
   max-width: 300px;
   max-height: 300px;
 }
