@@ -5,20 +5,23 @@
 </template>
 
 <script>
-import Posts from '~/articles/articles'
-import BlogRoll from '~/components/BlogRoll'
+import BlogRoll from '@/components/BlogRoll'
 export default {
   components: {
     BlogRoll
   },
   asyncData() {
+    const fileNames = require
+      .context('@/articles/', true, /\.md$/)
+      .keys()
+      .map((f) => f.slice(2, f.length - 3))
     async function asyncImport(fileName) {
-      const doc = await import(`~/articles/${fileName}.md`)
+      const doc = await import(`@/articles/${fileName}.md`)
       return { ...doc.attributes, path: fileName }
     }
-    return Promise.all(Posts.map((post) => asyncImport(post))).then((res) => ({
-      posts: res
-    }))
+    return Promise.all(fileNames.map((post) => asyncImport(post))).then(
+      (res) => ({ posts: res })
+    )
   }
 }
 </script>
