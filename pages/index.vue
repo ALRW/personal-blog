@@ -14,7 +14,7 @@ export default {
   asyncData() {
     async function asyncImport(fileName) {
       const doc = await import(`~/articles/${fileName}.md`)
-      return doc.attributes
+      return { ...doc.attributes, path: fileName }
     }
     return Promise.all(Posts.map((post) => asyncImport(post))).then((res) => ({
       posts: res

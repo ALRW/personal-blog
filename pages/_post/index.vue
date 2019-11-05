@@ -13,7 +13,7 @@
 <script>
 export default {
   async asyncData({ params }) {
-    const post = await import(`~/articles/${params.post}.md`)
+    const post = await import(`@/articles/${params.post}.md`)
     return {
       post
     }
