@@ -5,20 +5,17 @@
         <div class="content">
           <div v-html="post.html"></div>
         </div>
-        <hr />
-        <div class="comments">
-          <disqus shortname="andrew-werner"></disqus>
-        </div>
+        <Comments :identifier="post.id" :title="post.title" />
       </div>
     </div>
   </section>
 </template>
 
 <script>
-import Disqus from 'vue-disqus/src/vue-disqus.vue'
+import Comments from '~/components/Comments'
 export default {
   components: {
-    Disqus
+    Comments
   },
   async asyncData({ params }) {
     const post = await import(`@/articles/${params.post}.md`)

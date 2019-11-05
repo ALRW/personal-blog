@@ -19,6 +19,7 @@ export default {
         return {
           title: '',
           subtitle: '',
+          id: '',
           path: '',
           image: ''
         }
