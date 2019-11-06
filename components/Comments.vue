@@ -48,12 +48,7 @@ export default {
 
 <style>
 .comments {
-  border-top: 2px solid whitesmoke;
   border-bottom: 2px solid whitesmoke;
-  padding-top: 1em;
-  padding-bottom: 1em;
-}
-.comment-button {
-  margin: 1em 0 1em 0;
+  padding: 2em 2em 2em 2em;
 }
 </style>

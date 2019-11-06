@@ -1,22 +1,24 @@
 <template>
-  <form @submit.prevent="handleSubmit">
-    <div class="field is-grouped">
-      <div class="control is-expanded">
-        <input
-          class="input"
-          type="email"
-          name="email"
-          placeholder="my.name@something.com"
-          @input="handleInput($event.target.value)"
-        />
+  <div class="subscribe">
+    <form @submit.prevent="handleSubmit">
+      <div class="field is-grouped">
+        <div class="control is-expanded">
+          <input
+            class="input"
+            type="email"
+            name="email"
+            placeholder="my.name@something.com"
+            @input="handleInput($event.target.value)"
+          />
+        </div>
+        <div class="control">
+          <button class="button is-dark">Subscribe</button>
+        </div>
       </div>
-      <div class="control">
-        <button class="button">Subscribe</button>
-      </div>
-    </div>
-    <div v-if="success">Success</div>
-    <div v-if="failure">Failure</div>
-  </form>
+      <div v-if="success">Success</div>
+      <div v-if="failure">Failure</div>
+    </form>
+  </div>
 </template>
 
 <script>
@@ -67,3 +69,11 @@ export default {
   }
 }
 </script>
+
+<style>
+.subscribe {
+  border-top: 2px solid whitesmoke;
+  border-bottom: 2px solid whitesmoke;
+  padding: 2em 2em 2em 2em;
+}
+</style>
