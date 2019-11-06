@@ -1,7 +1,19 @@
 <template>
   <form @submit.prevent="handleSubmit">
-    <input type="email" @input="handleInput($event.target.value)" />
-    <button></button>
+    <div class="field is-grouped">
+      <div class="control is-expanded">
+        <input
+          class="input"
+          type="email"
+          name="email"
+          placeholder="my.name@something.com"
+          @input="handleInput($event.target.value)"
+        />
+      </div>
+      <div class="control">
+        <button class="button">Subscribe</button>
+      </div>
+    </div>
     <div v-if="success">Success</div>
     <div v-if="failure">Failure</div>
   </form>
@@ -10,21 +22,23 @@
 <script>
 import jsonp from 'jsonp'
 import queryString from 'query-string'
-import config from '@/nuxt.config'
 export default {
   data() {
     return {
       email: '',
       success: false,
       error: false,
-      loading: false
+      loading: false,
+      url: 'https://reasontree.us5.list-manage.com/subscribe/post',
+      userId: '9b1673411a4fb84fdd7d90f79',
+      listId: 'ee5a235ced'
     }
   },
   computed: {
     data() {
       return queryString.stringify({
-        u: config.mailchimp.userId,
-        id: config.mailchimp.listId,
+        u: this.userId,
+        id: this.listId,
         EMAIL: this.email
       })
     }
@@ -38,7 +52,7 @@ export default {
       this.success = false
       this.error = false
       this.loading = true
-      const url = `${config.mailchimp.url}?${this.data}`
+      const url = `${this.url}?${this.data}`
       jsonp(url, { param: 'c' }, this.handleResponse)
     },
     handleResponse(error, data) {

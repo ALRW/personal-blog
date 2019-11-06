@@ -69,11 +69,6 @@ export default {
       families: ['Cookie']
     }
   },
-  mailchimp: {
-    userId: process.env.MAILCHIMP_USERID,
-    listId: process.env.MAILCHIMP_LISTID,
-    url: process.env.MAILCHIMP_URL
-  },
   /*
    ** Build configuration
    */

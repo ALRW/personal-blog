@@ -5,6 +5,7 @@
         <div class="content">
           <div v-html="post.html"></div>
         </div>
+        <Subscribe />
         <Comments :identifier="post.id" :title="post.title" />
       </div>
     </div>
@@ -12,10 +13,12 @@
 </template>
 
 <script>
-import Comments from '~/components/Comments'
+import Comments from '@/components/Comments'
+import Subscribe from '@/components/Subscribe'
 export default {
   components: {
-    Comments
+    Comments,
+    Subscribe
   },
   async asyncData({ params }) {
     const post = await import(`@/articles/${params.post}.md`)
