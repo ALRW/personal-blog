@@ -39,11 +39,15 @@ export default {
   /*
    ** Global CSS
    */
-  css: ['@/assets/css/main.css', 'highlight.js/styles/darcula.css'],
+  css: [
+    '@assets/css/main.css',
+    'highlight.js/styles/darcula.css',
+    '@fortawesome/fontawesome-svg-core/styles.css'
+  ],
   /*
    ** Plugins to load before mounting the App
    */
-  plugins: ['~/plugins/disqus'],
+  plugins: ['@plugins/disqus', '@plugins/fontawesome'],
   /*
    ** Nuxt.js dev-modules
    */

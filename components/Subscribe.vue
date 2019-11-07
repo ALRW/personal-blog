@@ -8,6 +8,12 @@
           @input="handleHoney($event.target.value)"
         />
       </div>
+      <div v-if="success" class="has-text-centered subscribe-notification">
+        <font-awesome-icon :icon="['far', 'check-circle']" size="6x" />
+      </div>
+      <div v-if="failure" class="has-text-centered subscribe-notification">
+        <font-awesome-icon :icon="['far', 'times-circle']" size="6x" />
+      </div>
       <div class="field is-grouped">
         <div class="control is-expanded">
           <input
@@ -22,8 +28,6 @@
           <button class="button is-dark">Subscribe</button>
         </div>
       </div>
-      <div v-if="success">Success</div>
-      <div v-if="error">Failure</div>
     </form>
   </div>
 </template>
@@ -86,6 +90,9 @@ export default {
   border-top: 2px solid whitesmoke;
   border-bottom: 2px solid whitesmoke;
   padding: 2em 2em 2em 2em;
+}
+.subscribe-notification {
+  margin-bottom: 2em;
 }
 .honeypot {
   position: absolute;

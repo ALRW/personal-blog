@@ -50,3 +50,32 @@ data() {
   }
 }
 ```
+
+## Adding font awesome icons
+
+To add additional font awesome icons you need to import them in the plugin. For
+example if you wanted to add the `fa-address-book` update
+`plugins/fontawesome.js` with the following:
+
+```javascript
+import Vue from 'vue'
+import { library, config } from '@fortawesome/fontawesome-svg-core'
+import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
+import {
+  faCheckCircle,
+  faTimesCircle,
+  faAddressBook
+} from '@fortawesome/free-regular-svg-icons'
+
+config.autoAddCss = false
+
+library.add(faCheckCircle, faTimesCircle, faAddressBook)
+
+Vue.component('font-awesome-icon', FontAwesomeIcon)
+```
+
+Then to add the icon to the component simply put:
+
+```html
+<font-awesome-icon :icon="['far', 'address-book']" />
+```
