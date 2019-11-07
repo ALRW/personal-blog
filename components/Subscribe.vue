@@ -16,7 +16,7 @@
         </div>
       </div>
       <div v-if="success">Success</div>
-      <div v-if="failure">Failure</div>
+      <div v-if="error">Failure</div>
     </form>
   </div>
 </template>
@@ -31,7 +31,7 @@ export default {
       success: false,
       error: false,
       loading: false,
-      url: 'https://reasontree.us5.list-manage.com/subscribe/post',
+      url: 'https://reasontree.us5.list-manage.com/subscribe/post-json',
       userId: '9b1673411a4fb84fdd7d90f79',
       listId: 'ee5a235ced'
     }
@@ -57,9 +57,11 @@ export default {
       const url = `${this.url}?${this.data}`
       jsonp(url, { param: 'c' }, this.handleResponse)
     },
-    handleResponse(error, data) {
+    handleResponse(err, data) {
+      console.log(err)
+      console.log(data)
       this.loading = false
-      if (error || (data && data.result === 'error')) {
+      if (err) {
         this.error = true
       } else {
         this.success = true
