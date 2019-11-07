@@ -1,6 +1,13 @@
 <template>
   <div class="subscribe">
     <form @submit.prevent="handleSubmit">
+      <div class="honeypot" aria-hidden="true">
+        <input
+          type="text"
+          name="honey"
+          @input="handleHoney($event.target.value)"
+        />
+      </div>
       <div class="field is-grouped">
         <div class="control is-expanded">
           <input
@@ -28,6 +35,7 @@ export default {
   data() {
     return {
       email: '',
+      honeypot: false,
       success: false,
       error: false,
       loading: false,
@@ -37,7 +45,7 @@ export default {
     }
   },
   computed: {
-    data() {
+    params() {
       return queryString.stringify({
         u: this.userId,
         id: this.listId,
@@ -49,17 +57,18 @@ export default {
     handleInput(value) {
       this.email = value.trim()
     },
+    handleHoney(value) {
+      this.honeypot = Boolean(value)
+    },
     handleSubmit() {
-      if (this.email.length === 0 || this.loading) return
+      if (this.email.length === 0 || this.loading || this.honeypot) return
       this.success = false
       this.error = false
       this.loading = true
-      const url = `${this.url}?${this.data}`
+      const url = `${this.url}?${this.params}`
       jsonp(url, { param: 'c' }, this.handleResponse)
     },
     handleResponse(err, data) {
-      console.log(err)
-      console.log(data)
       this.loading = false
       if (err) {
         this.error = true
@@ -77,5 +86,9 @@ export default {
   border-top: 2px solid whitesmoke;
   border-bottom: 2px solid whitesmoke;
   padding: 2em 2em 2em 2em;
+}
+.honeypot {
+  position: absolute;
+  left: -5000px;
 }
 </style>
