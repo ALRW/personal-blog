@@ -11,7 +11,7 @@
       <div v-if="success" class="has-text-centered subscribe-notification">
         <font-awesome-icon :icon="['far', 'check-circle']" size="6x" />
       </div>
-      <div v-if="failure" class="has-text-centered subscribe-notification">
+      <div v-if="error" class="has-text-centered subscribe-notification">
         <font-awesome-icon :icon="['far', 'times-circle']" size="6x" />
       </div>
       <div class="field is-grouped">

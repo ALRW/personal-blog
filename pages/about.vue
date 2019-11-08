@@ -1,7 +1,7 @@
 <template>
   <div>
-    <section class="section is-flex">
-      <profile :title="post.attributes.title" />
+    <section class="section is-flex profile">
+      <profile :title="post.attributes.title" :image="post.attributes.image" />
     </section>
     <section class="section">
       <div class="columns">
@@ -40,6 +40,9 @@ export default {
 </script>
 
 <style>
+.profile {
+  justify-content: center;
+}
 .about {
   border-top: 2px solid whitesmoke;
   padding-top: 5em;
