@@ -1,5 +1,6 @@
 ---
 title: Learning to Lead (Quickly)
+author: Andrew Werner
 id: learning-to-lead-quickly
 subtitle: How to become effective at the art of leadership and do it at speed
 image: /2019-11-08-learning-to-lead-quickly/learning-to-lead.jpg
