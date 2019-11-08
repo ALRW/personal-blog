@@ -98,7 +98,7 @@ export default {
     extend(config, _) {
       config.module.rules.push({
         test: /\.md$/,
-        include: path.resolve(__dirname, `articles`),
+        include: path.resolve(__dirname, `markdown`),
         loader: `frontmatter-markdown-loader`,
         options: {
           markdown: (body) => md.render(body)

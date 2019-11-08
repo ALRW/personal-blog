@@ -8,10 +8,23 @@
       />
     </figure>
     <div class="has-text-centered">
-      <h1 class="is-size-4">Hey there, I'm Andrew</h1>
+      <h1 class="is-size-4">{{ title }}</h1>
     </div>
   </div>
 </template>
+
+<script>
+export default {
+  props: {
+    title: {
+      type: String,
+      default() {
+        return ''
+      }
+    }
+  }
+}
+</script>
 
 <style>
 .personal-profile {

@@ -12,11 +12,11 @@ export default {
   },
   asyncData() {
     const fileNames = require
-      .context('@/articles/', true, /\.md$/)
+      .context('@/markdown/articles/', true, /\.md$/)
       .keys()
       .map((f) => f.slice(2, f.length - 3))
     async function asyncImport(fileName) {
-      const doc = await import(`@/articles/${fileName}.md`)
+      const doc = await import(`@/markdown/articles/${fileName}.md`)
       return { ...doc.attributes, path: fileName }
     }
     return Promise.all(fileNames.map((post) => asyncImport(post))).then(

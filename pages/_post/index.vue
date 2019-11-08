@@ -2,9 +2,7 @@
   <section class="section">
     <div class="columns">
       <div class="column is-8 is-offset-2">
-        <div class="content">
-          <div v-html="post.html"></div>
-        </div>
+        <Markdown :html="post.html" />
         <Subscribe />
         <Comments :identifier="post.id" :title="post.title" />
       </div>
@@ -15,13 +13,15 @@
 <script>
 import Comments from '@/components/Comments'
 import Subscribe from '@/components/Subscribe'
+import Markdown from '@/components/Markdown'
 export default {
   components: {
     Comments,
-    Subscribe
+    Subscribe,
+    Markdown
   },
   async asyncData({ params }) {
-    const post = await import(`@/articles/${params.post}.md`)
+    const post = await import(`@/markdown/articles/${params.post}.md`)
     return {
       post
     }

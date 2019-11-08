@@ -4,14 +4,6 @@
       <div class="column is-6">
         <p>© 2019 Andrew Werner. All rights reserved.</p>
       </div>
-      <div class="column is-6 has-text-right-tablet">
-        <p>
-          Built by
-          <span class="reasontree is-size-4">
-            <a href="https://reasontree.io"> ReasonTree </a>
-          </span>
-        </p>
-      </div>
     </div>
   </footer>
 </template>

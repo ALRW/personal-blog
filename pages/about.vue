@@ -1,12 +1,12 @@
 <template>
   <div>
     <section class="section is-flex">
-      <profile />
+      <profile :title="post.attributes.title" />
     </section>
     <section class="section">
       <div class="columns">
         <div class="column is-8 is-offset-2 about">
-          <about />
+          <markdown :html="post.html" />
         </div>
       </div>
     </section>
@@ -22,13 +22,19 @@
 
 <script>
 import Profile from '@/components/Profile'
-import About from '@/components/About'
 import Subscribe from '@/components/Subscribe'
+import Markdown from '@/components/Markdown'
 export default {
   components: {
     Profile,
-    About,
+    Markdown,
     Subscribe
+  },
+  async asyncData({ params }) {
+    const post = await import(`@/markdown/pages/about.md`)
+    return {
+      post
+    }
   }
 }
 </script>
