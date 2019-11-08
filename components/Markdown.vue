@@ -9,9 +9,7 @@ export default {
   props: {
     html: {
       type: String,
-      default() {
-        return ''
-      }
+      default: ''
     }
   }
 }

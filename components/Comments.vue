@@ -25,15 +25,11 @@ export default {
   props: {
     identifier: {
       type: String,
-      default() {
-        return ''
-      }
+      default: ''
     },
     title: {
       type: String,
-      default() {
-        return ''
-      }
+      default: ''
     }
   },
   data() {

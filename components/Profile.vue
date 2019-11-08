@@ -14,15 +14,11 @@ export default {
   props: {
     title: {
       type: String,
-      default() {
-        return ''
-      }
+      default: ''
     },
     image: {
       type: String,
-      default() {
-        return ''
-      }
+      default: ''
     }
   },
   computed: {
