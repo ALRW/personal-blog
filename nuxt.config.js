@@ -93,9 +93,9 @@ export default {
     },
     generate: {
       routes() {
-        const files = glob.sync(`**/*.md`, { cwd: `articles` })
+        const files = glob.sync(`**/*.md`, { cwd: `markdown/articles` })
         return files.map(
-          (post) => `/blog/${post.substr(0, post.lastIndexOf(`.`))}`
+          (post) => `/articles/${post.substr(0, post.lastIndexOf(`.`))}`
         )
       }
     },
