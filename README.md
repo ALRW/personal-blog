@@ -79,3 +79,11 @@ Then to add the icon to the component simply put:
 ```html
 <font-awesome-icon :icon="['far', 'address-book']" />
 ```
+
+## Routing
+
+Routing is handled automatically by the nuxt framework however, if you create
+a new dynamic page that is not already defined remember to update the generated
+routes in the `nuxt.config.js` so that these pages are statically rendered at
+build time. Otherwise, these pages will only be available through your app,
+linking to them externally will return a 404.
