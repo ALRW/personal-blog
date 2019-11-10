@@ -83,20 +83,20 @@ export default {
   /*
    ** Build configuration
    */
+  generate: {
+    routes() {
+      const files = glob.sync(`**/*.md`, { cwd: `markdown/articles` })
+      return files.map(
+        (post) => `/articles/${post.substr(0, post.lastIndexOf(`.`))}`
+      )
+    }
+  },
   build: {
     postcss: {
       preset: {
         features: {
           customProperties: false
         }
-      }
-    },
-    generate: {
-      routes() {
-        const files = glob.sync(`**/*.md`, { cwd: `markdown/articles` })
-        return files.map(
-          (post) => `/articles/${post.substr(0, post.lastIndexOf(`.`))}`
-        )
       }
     },
     /*
