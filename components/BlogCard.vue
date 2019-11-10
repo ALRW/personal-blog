@@ -1,6 +1,6 @@
 <template>
   <div :class="blogClass">
-    <nuxt-link :to="post.path">
+    <nuxt-link :to="`articles/${post.path}`">
       <figure class="image blog-roll-image">
         <img :alt="post.title" :srcset="postImage" />
       </figure>
