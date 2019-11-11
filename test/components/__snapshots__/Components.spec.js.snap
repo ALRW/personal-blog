@@ -1,0 +1,5 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Markdown Markdown renders correctly 1`] = `"<div class=\\"content\\"><div><h1>Hello</h1></div></div>"`;
+
+exports[`Navbar Navbar renders correctly 1`] = `"<nav class=\\"navbar has-shadow\\"><div class=\\"navbar-brand\\"><a class=\\"navbar-item is-size-4\\">Andrew | Werner</a> <a role=\\"button\\" aria-label=\\"menu\\" aria-expanded=\\"false\\" class=\\"navbar-burger\\"><span aria-hidden=\\"true\\"></span> <span aria-hidden=\\"true\\"></span> <span aria-hidden=\\"true\\"></span></a></div> <div class=\\"navbar-menu\\"><div class=\\"navbar-end\\"><a class=\\"navbar-item\\">Articles</a> <a class=\\"navbar-item\\">About Me</a></div></div></nav>"`;
