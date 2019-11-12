@@ -1,5 +1,7 @@
 module.exports = {
   moduleNameMapper: {
+    '\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf)$':
+      '<rootDir>/test/mocks/fileMock.js',
     '^@/(.*)$': '<rootDir>/$1',
     '^~/(.*)$': '<rootDir>/$1',
     '^vue$': 'vue/dist/vue.common.js'

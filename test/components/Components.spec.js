@@ -2,6 +2,7 @@ import { RouterLinkStub } from '@vue/test-utils'
 import { subjectUnderTest } from '@/test/utils'
 import Markdown from '@/components/Markdown'
 import Navbar from '@/components/Navbar'
+import Profile from '@/components/Profile'
 
 const components = [
   {
@@ -13,6 +14,11 @@ const components = [
     name: 'Navbar',
     component: Navbar,
     options: { stubs: { NuxtLink: RouterLinkStub } }
+  },
+  {
+    name: 'Profile',
+    component: Profile,
+    options: { propsData: { title: 'title', image: '/something.jpg' } }
   }
 ]
 
