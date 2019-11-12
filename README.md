@@ -36,7 +36,7 @@ _Cookie_ font:
 }
 ```
 
-## Adding your MailChimp details for the subscribe component
+## Adding your MailChimp details for the Subscribe component
 
 In order to correctly configure the mailchimp subscription component you will
 need to add the following to the components `data` object:
@@ -47,6 +47,24 @@ data() {
     url: 'https://domain.usX.list-manage.com/subscribe/post-json',
     userId: 'userId',
     listId: 'listId'
+  }
+}
+```
+
+## Adding you Disqus details for the Comments component
+
+The Disqus component requires at a minimum the details of your Disqus shortname
+This is used to identify comments related to your account and display them
+correctly. While the component will provide other details automatically to
+Disqus, for example article `title`, you will need to change the shortname
+property to your own in the components `data` function:
+
+```javascript
+data() {
+  return {
+    show: false,
+    shortname: `andrew-werner`,
+    url: this.$route.query.page
   }
 }
 ```

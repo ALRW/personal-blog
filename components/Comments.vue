@@ -4,7 +4,7 @@
       class="button is-fullwidth comment-button has-text-weight-semibold"
       @click="show = !show"
     >
-      {{ show ? `Hide Comments` : `Show Comments` }}
+      {{ show ? 'Hide Comments' : 'Show Comments' }}
     </button>
     <disqus
       v-if="show"

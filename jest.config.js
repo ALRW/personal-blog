@@ -1,5 +1,6 @@
 module.exports = {
   moduleNameMapper: {
+    '.*vue-disqus.*': '<rootDir>/test/mocks/externalComponentMock',
     '\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf)$':
       '<rootDir>/test/mocks/fileMock.js',
     '^@/(.*)$': '<rootDir>/$1',
