@@ -31,7 +31,7 @@ export default {
     Subscribe
   },
   async asyncData({ params }) {
-    const post = await import(`@/markdown/pages/about.md`)
+    const post = await import('@/markdown/pages/about.md')
     return {
       post
     }

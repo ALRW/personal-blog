@@ -32,9 +32,9 @@
 export default {
   data() {
     return {
-      title: `Andrew | Werner`,
-      articles: `Articles`,
-      about: `About Me`,
+      title: 'Andrew | Werner',
+      articles: 'Articles',
+      about: 'About Me',
       isHamburgerActive: false
     }
   }

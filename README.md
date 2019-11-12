@@ -63,7 +63,7 @@ property to your own in the components `data` function:
 data() {
   return {
     show: false,
-    shortname: `andrew-werner`,
+    shortname: 'your-shortname-here',
     url: this.$route.query.page
   }
 }
@@ -105,3 +105,23 @@ a new dynamic page that is not already defined remember to update the generated
 routes in the `nuxt.config.js` so that these pages are statically rendered at
 build time. Otherwise, these pages will only be available through your app,
 linking to them externally will return a 404.
+
+## Testing
+
+Testing can be run simply with:
+
+```bash
+npm test
+```
+
+This is an alias for `jest` which is the testing framework used in this project
+
+There are some minor configuration points to note:
+
+ - Images are stubbed to return an object with a `srcset` key.
+ - By default Jest does not run imports from node-modules through the
+   babel/webpack asset pipeline. This can cause some issues when a node module
+   exposes its own vue component. the approach taken here has been simple to
+   stub these components.
+
+For full details refer to the `jest.config.js`

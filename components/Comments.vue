@@ -35,7 +35,7 @@ export default {
   data() {
     return {
       show: false,
-      shortname: `andrew-werner`,
+      shortname: 'andrew-werner',
       url: this.$route.query.page
     }
   }
