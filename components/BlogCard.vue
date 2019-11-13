@@ -1,9 +1,12 @@
 <template>
   <div :class="blogClass">
     <nuxt-link :to="`articles/${post.path}`">
-      <figure class="image blog-roll-image">
-        <img :alt="post.title" :srcset="postImage" />
-      </figure>
+      <div v-lazy-container="{ selector: 'img' }" class="blog-roll-image">
+        <img
+          :data-src="require(`@/assets/images${post.image}`)"
+          :data-loading="require(`@/assets/images${post.image}?lqip`)"
+        />
+      </div>
       <h1 class="title">{{ post.title }}</h1>
       <h1 class="subtitle">{{ post.subtitle }}</h1>
     </nuxt-link>
@@ -31,9 +34,6 @@ export default {
     }
   },
   computed: {
-    postImage() {
-      return require(`@/assets/images${this.post.image}`).srcSet
-    },
     blogClass() {
       const size = this.index === 0 || this.index % 4 === 0 ? '12' : '4'
       return `column is-${size} blog-card`

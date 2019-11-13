@@ -54,7 +54,7 @@ export default {
   /*
    ** Plugins to load before mounting the App
    */
-  plugins: ['@plugins/disqus', '@plugins/fontawesome'],
+  plugins: ['@plugins/disqus', '@plugins/fontawesome', '@plugins/lazyload'],
   /*
    ** Nuxt.js dev-modules
    */
@@ -70,8 +70,12 @@ export default {
     '@nuxtjs/bulma',
     '@nuxtjs/pwa',
     'nuxt-webfontloader',
-    'nuxt-responsive-loader'
+    '@bazzite/nuxt-optimized-images'
   ],
+  optimizedImages: {
+    optimizeImages: true,
+    optimizeImagesInDev: true
+  },
   /*
    ** Webfontloader Config
    */

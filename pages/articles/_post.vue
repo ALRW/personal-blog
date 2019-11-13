@@ -5,9 +5,12 @@
         <div class="content">
           <h1 class="title is-size-1">{{ attributes.title }}</h1>
         </div>
-        <figure class="image blog-roll-image">
-          <img :alt="attributes.title" :srcset="postImage" />
-        </figure>
+        <div v-lazy-container="{ selector: 'img' }">
+          <img
+            :data-src="require(`@/assets/images${attributes.image}`)"
+            :data-loading="require(`@/assets/images${attributes.image}?lqip`)"
+          />
+        </div>
         <div class="content">
           <h3 class="subtitle">{{ attributes.subtitle }}</h3>
         </div>
@@ -42,11 +45,6 @@ export default {
         },
         { property: 'og:title', content: this.attributes.pageTitle }
       ]
-    }
-  },
-  computed: {
-    postImage() {
-      return require(`@/assets/images${this.attributes.image}`).srcSet
     }
   },
   async asyncData({ params }) {
