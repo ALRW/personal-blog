@@ -77,7 +77,7 @@ export default {
    */
   webfontloader: {
     google: {
-      families: ['Cookie']
+      families: ['Montserrat', 'Open Sans']
     }
   },
   /*
