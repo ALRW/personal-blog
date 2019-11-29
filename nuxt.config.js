@@ -1,6 +1,7 @@
 import path from 'path'
 import glob from 'glob'
 import markdownIt from 'markdown-it'
+import emoji from 'markdown-it-emoji'
 import hljs from 'highlight.js'
 
 const md = markdownIt({
@@ -112,7 +113,7 @@ export default {
         include: path.resolve(__dirname, `markdown`),
         loader: `frontmatter-markdown-loader`,
         options: {
-          markdown: (body) => md.render(body)
+          markdown: (body) => md.use(emoji).render(body)
         }
       })
     }

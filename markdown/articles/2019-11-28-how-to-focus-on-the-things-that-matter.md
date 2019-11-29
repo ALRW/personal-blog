@@ -65,7 +65,7 @@ budgets and equipment. The way he achieved this was with the combination of a
 few small habits and tricks that all combined placed him in the driving seat to
 decide where to dedicate his time and attention.
 
-## Messages, Notifications, Emails ¯\_(ツ)_/¯
+## Messages, Notifications, Emails :man_shrugging:
 
 First on the list: communication. He would schedule two periods into the day at
 11:00 and 17:00 where he would shut the door and open his emails.
