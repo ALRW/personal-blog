@@ -20,7 +20,7 @@ this fantastic leader that over time provided my real lessons.
 
 ## A Flawed Leader
 
-I first noticed something one day when I walked into my bosses office to talk
+I first noticed something one day when I walked into my boss's office to talk
 through an alteration to training plan. He was sat behind his desk and, as we
 talked, I kept hearing a number of small pinging noises.
 
@@ -42,7 +42,7 @@ next day.
 ## Seeing the Contrast
 
 A little later I moved roles and began to work for an almost diametrically
-different boss. Gone was the raw charisma, style, llare and as it turns out hair
+different boss. Gone was the raw charisma, style, flare and as it turns out hair
 (perhaps there’s a link). In place of these came a structured rigidity and
 process that felt stifling. In all honesty, it was a shock and one that to begin
 with I didn’t entirely take to.
@@ -53,7 +53,7 @@ time, seemed to infect the whole organisation. And where once people had
 grumbled about a “micromanaging busy-body” they now began to speak about a
 “solid operator”. The question I had: how did he do it?
 
-## Becomming Effective
+## Becoming Effective
 
 Observing my new boss over the course of a couple of years I noticed that while
 he employed a myriad of strategies to help improve his effectiveness all of them
@@ -65,7 +65,7 @@ budgets and equipment. The way he achieved this was with the combination of a
 few small habits and tricks that all combined placed him in the driving seat to
 decide where to dedicate his time and attention.
 
-## Communication
+## Messages, Notifications, Emails ¯\_(ツ)_/¯
 
 First on the list: communication. He would schedule two periods into the day at
 11:00 and 17:00 where he would shut the door and open his emails.
@@ -98,9 +98,9 @@ facing and with a sigh begin to reconstruct the mental model you had spent most
 of the morning building. Sound familiar? That’s right, it’s the same issue
 created by over-active emails: context switching.
 
-To reduce this cause of context switching my new boss created a gatekeeper. To
-see him you had to go through her and she had strict instructions to only ever
-allow meetings into his diary with at least a days notice.
+To reduce this cause of context switching my new boss created a gatekeeper: his
+diary. To see him you had to go through it and nothing was accepted without at
+least a days notice.
 
 In his experience creating this space would often get people to think through
 their issues and solve them without the meeting in the first place. Anecdotally,
@@ -127,8 +127,9 @@ meetings that previously had taken up so much time.
 ## How Can This Help Me?
 
 You might also be thinking: how do I put this into practice? I don’t have an
-office, I don’t have the luxury of an assistant. And that’s true for most of us.
-However, there are definitely subtle things we can do that have the same effect.
+office, I don't have a secretary to do all this for me. And that’s true for most
+of us. However, there are definitely subtle things we can do that have the same
+effect.
 
  - Make your diary public and available to anyone who wants to see you.
  - Book time for the tasks you wish to accomplish and leave small slots for people to book time with you.
