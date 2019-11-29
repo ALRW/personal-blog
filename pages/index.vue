@@ -20,7 +20,7 @@ export default {
       return { ...doc.attributes, path: fileName }
     }
     return Promise.all(fileNames.map((post) => asyncImport(post))).then(
-      (res) => ({ posts: res })
+      (res) => ({ posts: res.reverse() })
     )
   }
 }
