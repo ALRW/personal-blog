@@ -25,16 +25,3 @@ export default {
   }
 }
 </script>
-
-<style>
-.personal-profile {
-  max-width: 300px;
-  max-height: 300px;
-}
-.is-rounded {
-  border-radius: 100%;
-}
-.has-text-centered {
-  margin-top: 5%;
-}
-</style>
