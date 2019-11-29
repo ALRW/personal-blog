@@ -5,12 +5,7 @@
         <div class="content">
           <h1 class="title is-size-1">{{ attributes.title }}</h1>
         </div>
-        <div v-lazy-container="{ selector: 'img' }">
-          <img
-            :data-src="require(`@/assets/images${attributes.image}`)"
-            :data-loading="require(`@/assets/images${attributes.image}?lqip`)"
-          />
-        </div>
+        <ProgressiveImage :image-path="attributes.image" />
         <div class="content">
           <h3 class="subtitle">{{ attributes.subtitle }}</h3>
         </div>
@@ -24,13 +19,15 @@
 
 <script>
 import Comments from '@/components/Comments'
-import Subscribe from '@/components/Subscribe'
 import Markdown from '@/components/Markdown'
+import ProgressiveImage from '@/components/ProgressiveImage'
+import Subscribe from '@/components/Subscribe'
 export default {
   components: {
     Comments,
-    Subscribe,
-    Markdown
+    Markdown,
+    ProgressiveImage,
+    Subscribe
   },
   head() {
     return {

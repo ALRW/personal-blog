@@ -1,12 +1,7 @@
 <template>
   <div :class="blogClass">
     <nuxt-link :to="`articles/${post.path}`">
-      <div v-lazy-container="{ selector: 'img' }" class="blog-roll-image">
-        <img
-          :data-src="require(`@/assets/images${post.image}`)"
-          :data-loading="require(`@/assets/images${post.image}?lqip`)"
-        />
-      </div>
+      <ProgressiveImage :image-path="post.image" />
       <h1 class="title">{{ post.title }}</h1>
       <h1 class="subtitle">{{ post.subtitle }}</h1>
     </nuxt-link>
@@ -14,7 +9,11 @@
 </template>
 
 <script>
+import ProgressiveImage from '@/components/ProgressiveImage'
 export default {
+  components: {
+    ProgressiveImage
+  },
   props: {
     post: {
       type: Object,
@@ -43,9 +42,6 @@ export default {
 </script>
 
 <style>
-.blog-roll-image {
-  max-width: 100%;
-}
 .blog-card {
   padding: 1em 0 1em 0;
 }
@@ -53,6 +49,6 @@ export default {
   -webkit-transform: scale(1.01);
   -moz-transform: scale(1.01);
   -ms-transform: scale(1.01);
-  transform: scale(1.01);
+  transform: scale(1.03);
 }
 </style>

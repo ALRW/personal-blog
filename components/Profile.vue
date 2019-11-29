@@ -1,12 +1,6 @@
 <template>
   <div>
-    <div v-lazy-container="{ selector: 'img' }" class="personal-profile">
-      <img
-        class="is-rounded"
-        :data-src="require(`@/assets/images${image}`)"
-        :data-loading="require(`@/assets/images${image}?lqip`)"
-      />
-    </div>
+    <ProgressiveImage :aspect-ratio="'is-square'" :is-rounded="true" />
     <div class="has-text-centered">
       <h1 class="is-size-4">{{ title }}</h1>
     </div>
@@ -14,7 +8,11 @@
 </template>
 
 <script>
+import ProgressiveImage from '@/components/ProgressiveImage'
 export default {
+  components: {
+    ProgressiveImage
+  },
   props: {
     title: {
       type: String,
