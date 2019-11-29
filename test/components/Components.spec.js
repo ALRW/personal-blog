@@ -7,6 +7,7 @@ import Footer from '@/components/Footer'
 import Markdown from '@/components/Markdown'
 import Navbar from '@/components/Navbar'
 import Profile from '@/components/Profile'
+import ProgressiveImage from '@/components/ProgressiveImage'
 import Subscribe from '@/components/Subscribe'
 
 const mockPost = {
@@ -43,8 +44,7 @@ const components = [
   },
   {
     name: 'Footer',
-    component: Footer,
-    options: {}
+    component: Footer
   },
   {
     name: 'Markdown',
@@ -62,9 +62,12 @@ const components = [
     options: { propsData: { title: 'title', image: '/something.jpg' } }
   },
   {
+    name: 'ProgressiveImage',
+    component: ProgressiveImage
+  },
+  {
     name: 'Subscribe',
-    component: Subscribe,
-    options: {}
+    component: Subscribe
   }
 ]
 

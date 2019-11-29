@@ -1,3 +1,1 @@
-export default {
-  srcset: ''
-}
+export default ''

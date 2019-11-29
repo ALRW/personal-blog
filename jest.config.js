@@ -1,8 +1,9 @@
 module.exports = {
   moduleNameMapper: {
-    '.*vue-disqus.*': '<rootDir>/test/mocks/externalComponentMock',
+    '.*vue-disqus.*': '<rootDir>/test/mocks/fileMock.js',
     '\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf)$':
       '<rootDir>/test/mocks/fileMock.js',
+    '.*lqip$': '<rootDir>/test/mocks/fileMock.js',
     '^@/(.*)$': '<rootDir>/$1',
     '^~/(.*)$': '<rootDir>/$1',
     '^vue$': 'vue/dist/vue.common.js'
