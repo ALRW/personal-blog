@@ -21,22 +21,22 @@ this fantastic leader that over time provided my real lessons.
 ## A Flawed Leader
 
 I first noticed something one day when I walked into my boss's office to talk
-through an alteration to training plan. He was sat behind his desk and, as we
+through an alteration to a training plan. She was sat behind her desk and, as we
 talked, I kept hearing a number of small pinging noises.
 
-At each ping he would briefly turn towards the screen on his desk, squint, then
-remember he was mid conversation and turn back towards me. What was meant to be
+At each ping she would briefly turn towards the screen on her desk, squint, then
+remember she was mid conversation and turn back towards me. What was meant to be
 a quick five minute chat turned into a rather unproductive twenty minute waffle.
 
 For some reason, this stuck in my mind and having seen it once I now began to
-notice this pattern on repeat. Throughout the day I noticed him rapidly flitting
+notice this pattern on repeat. Throughout the day I noticed her rapidly flitting
 between multiple short term tasks and meetings without actually getting anything
 done.
 
 As the day would draw to a close and the number of distractions began to
-decrease he would suddenly become productive working through all the tasks he
+decrease she would suddenly become productive working through all the tasks she
 had accumulated but not worked on during the day. This was particularly sad to
-see as it often meant he worked late into the night in order to be ready for the
+see as it often meant she worked late into the night in order to be ready for the
 next day.
 
 ## Seeing the Contrast
@@ -97,6 +97,8 @@ it-turns-out-not-so-quick-question, you focus back to the problem you were
 facing and with a sigh begin to reconstruct the mental model you had spent most
 of the morning building. Sound familiar? That’s right, it’s the same issue
 created by over-active emails: context switching.
+
+![How not to focus](/posts/how-not-to-focus.jpg)
 
 To reduce this cause of context switching my new boss created a gatekeeper: his
 diary. To see him you had to go through it and nothing was accepted without at
