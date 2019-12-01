@@ -35,7 +35,7 @@ export default {
   computed: {
     blogClass() {
       const size = this.index === 0 || this.index % 4 === 0 ? '12' : '4'
-      return `column is-${size} blog-card`
+      return `column is-${size} blog-card link-pop`
     }
   }
 }
@@ -44,11 +44,5 @@ export default {
 <style>
 .blog-card {
   padding: 1em 0 1em 0;
-}
-.blog-card:hover {
-  -webkit-transform: scale(1.01);
-  -moz-transform: scale(1.01);
-  -ms-transform: scale(1.01);
-  transform: scale(1.03);
 }
 </style>

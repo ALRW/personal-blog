@@ -8,6 +8,7 @@ import Markdown from '@/components/Markdown'
 import Navbar from '@/components/Navbar'
 import Profile from '@/components/Profile'
 import ProgressiveImage from '@/components/ProgressiveImage'
+import SocialIcons from '@/components/SocialIcons'
 import Subscribe from '@/components/Subscribe'
 
 const mockPost = {
@@ -64,6 +65,10 @@ const components = [
   {
     name: 'ProgressiveImage',
     component: ProgressiveImage
+  },
+  {
+    name: 'SocialIcons',
+    component: SocialIcons
   },
   {
     name: 'Subscribe',

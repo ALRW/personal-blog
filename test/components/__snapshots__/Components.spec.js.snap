@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`BlogCard BlogCard renders correctly 1`] = `"<div class=\\"column is-12 blog-card\\"><a><progressiveimage-stub aspectratio=\\"is-2by1\\" imagepath=\\"/path/to/image.jpg\\"></progressiveimage-stub> <h1 class=\\"title\\">title</h1> <h1 class=\\"subtitle\\">subtitle</h1></a></div>"`;
+exports[`BlogCard BlogCard renders correctly 1`] = `"<div class=\\"column is-12 blog-card link-pop\\"><a><progressiveimage-stub aspectratio=\\"is-2by1\\" imagepath=\\"/path/to/image.jpg\\"></progressiveimage-stub> <h1 class=\\"title\\">title</h1> <h1 class=\\"subtitle\\">subtitle</h1></a></div>"`;
 
 exports[`BlogRoll BlogRoll renders correctly 1`] = `"<section class=\\"section\\"><div class=\\"columns is-multiline\\"><blogcard-stub post=\\"[object Object]\\" index=\\"0\\"></blogcard-stub></div></section>"`;
 
@@ -19,5 +19,7 @@ exports[`Navbar Navbar renders correctly 1`] = `"<nav class=\\"navbar has-shadow
 exports[`Profile Profile renders correctly 1`] = `"<div><progressiveimage-stub aspectratio=\\"is-square\\" imagepath=\\"/personal-profile.jpg\\" isrounded=\\"true\\"></progressiveimage-stub> <div class=\\"has-text-centered\\"><h1 class=\\"is-size-4\\">title</h1></div></div>"`;
 
 exports[`ProgressiveImage ProgressiveImage renders correctly 1`] = `"<figure class=\\"image is-2by1\\"><div><img data-src=\\"[object Object]\\" data-loading=\\"[object Object]\\" class=\\"\\"></div></figure>"`;
+
+exports[`SocialIcons SocialIcons renders correctly 1`] = `"<div class=\\"is-flex social-icons\\"><a href=\\"https://github.com/ALRW\\" target=\\"_blank\\" class=\\"link-pop\\"><font-awesome-icon-stub icon=\\"fab,github-square\\" size=\\"5x\\" class=\\"has-text-dark\\"></font-awesome-icon-stub></a> <a href=\\"https://www.linkedin.com/in/wernerandrew\\" target=\\"_blank\\" class=\\"link-pop\\"><font-awesome-icon-stub icon=\\"fab,linkedin\\" size=\\"5x\\" class=\\"has-text-dark\\"></font-awesome-icon-stub></a></div>"`;
 
 exports[`Subscribe Subscribe renders correctly 1`] = `"<div class=\\"subscribe\\"><form><div aria-hidden=\\"true\\" class=\\"honeypot\\"><input type=\\"text\\" name=\\"honey\\"></div> <!----> <!----> <div class=\\"field is-grouped\\"><div class=\\"control is-expanded\\"><input type=\\"email\\" name=\\"email\\" placeholder=\\"my.name@something.com\\" class=\\"input\\"></div> <div class=\\"control\\"><button class=\\"button is-dark\\">Subscribe</button></div></div></form></div>"`;

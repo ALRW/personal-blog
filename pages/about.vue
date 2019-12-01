@@ -12,6 +12,13 @@
     </section>
     <section class="section">
       <div class="columns">
+        <div class="column is-8 is-offset-2 about">
+          <SocialIcons />
+        </div>
+      </div>
+    </section>
+    <section class="section">
+      <div class="columns">
         <div class="column is-8 is-offset-2">
           <subscribe />
         </div>
@@ -22,11 +29,13 @@
 
 <script>
 import Profile from '@/components/Profile'
+import SocialIcons from '@/components/SocialIcons'
 import Subscribe from '@/components/Subscribe'
 import Markdown from '@/components/Markdown'
 export default {
   components: {
     Profile,
+    SocialIcons,
     Markdown,
     Subscribe
   },
