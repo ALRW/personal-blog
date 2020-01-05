@@ -8,6 +8,7 @@ h6 {
 }
 p {
   font-family: 'Open Sans', sans-serif;
+  font-size: 1.22em;
 }
 .link-pop:hover {
   -webkit-transform: scale(1.03);

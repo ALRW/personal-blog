@@ -9,6 +9,7 @@
         <div class="content">
           <h3 class="subtitle">{{ attributes.subtitle }}</h3>
         </div>
+        <hr />
         <Markdown :html="html" />
         <Subscribe />
         <Comments :identifier="attributes.id" :title="attributes.title" />

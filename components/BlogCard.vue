@@ -34,7 +34,7 @@ export default {
   },
   computed: {
     blogClass() {
-      const size = this.index === 0 || this.index % 4 === 0 ? '12' : '4'
+      const size = this.index === 0 || this.index % 3 === 0 ? '12' : '6'
       return `column is-${size} blog-card link-pop`
     }
   }
@@ -43,6 +43,6 @@ export default {
 
 <style>
 .blog-card {
-  padding: 1em 0 1em 0;
+  padding: 1em;
 }
 </style>

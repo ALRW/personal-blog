@@ -90,8 +90,8 @@ next time.
 
 By now you might be thinking that this sounds like a recipe for a load of
 over-inflated, overconfident leaders strutting around shooting from the hip
-making a ton of awful decisions and it can. Handily though, it brings me to a
-final and difficult to implement piece of advice. Your real job as a Leader is
+making a ton of awful decisions which it can be. Handily though, it brings me to
+a final and difficult to implement piece of advice. Your real job as a Leader is
 most often just to listen.
 
 Pop quiz. How do you make the **correct** decision in the moment?
