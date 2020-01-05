@@ -19,9 +19,9 @@ export default {
       const doc = await import(`@/markdown/articles/${fileName}.md`)
       return { ...doc.attributes, path: fileName }
     }
-    return Promise.all(fileNames.map((post) => asyncImport(post))).then(
-      (res) => ({ posts: res.reverse() })
-    )
+    return Promise.all(
+      fileNames.map((post) => asyncImport(post))
+    ).then((res) => ({ posts: res.reverse() }))
   }
 }
 </script>
