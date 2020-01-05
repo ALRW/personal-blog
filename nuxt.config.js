@@ -11,6 +11,13 @@ const md = markdownIt({
   }
 })
 
+const routes = () => {
+  const files = glob.sync(`**/*.md`, { cwd: `markdown/articles` })
+  return files.map(
+    (post) => `/articles/${post.substr(0, post.lastIndexOf(`.`))}`
+  )
+}
+
 export default {
   mode: 'universal',
   /*
@@ -71,9 +78,15 @@ export default {
     '@nuxtjs/bulma',
     '@nuxtjs/pwa',
     '@nuxtjs/robots',
+    '@nuxtjs/sitemap',
     'nuxt-webfontloader',
     '@bazzite/nuxt-optimized-images'
   ],
+  sitemap: {
+    hostname: 'https://andrewwerner.blog',
+    gzip: true,
+    routes: routes()
+  },
   optimizedImages: {
     optimizeImages: true,
     optimizeImagesInDev: true
@@ -90,12 +103,7 @@ export default {
    ** Build configuration
    */
   generate: {
-    routes() {
-      const files = glob.sync(`**/*.md`, { cwd: `markdown/articles` })
-      return files.map(
-        (post) => `/articles/${post.substr(0, post.lastIndexOf(`.`))}`
-      )
-    }
+    routes: routes()
   },
   build: {
     postcss: {
