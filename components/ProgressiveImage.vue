@@ -5,6 +5,7 @@
         :class="isRounded && 'is-rounded'"
         :data-src="require(`@/assets/images${imagePath}`)"
         :data-loading="require(`@/assets/images${imagePath}?lqip`)"
+        :alt="altText"
       />
     </div>
   </figure>
@@ -16,6 +17,10 @@ export default {
     aspectRatio: {
       type: String,
       default: 'is-2by1'
+    },
+    altText: {
+      type: String,
+      default: 'image description'
     },
     imagePath: {
       type: String,

@@ -3,12 +3,12 @@
     <div class="navbar-brand">
       <nuxt-link class="navbar-item is-size-4" to="/">{{ title }}</nuxt-link>
       <a
+        @click="isHamburgerActive = !isHamburgerActive"
         :class="{ 'is-active': isHamburgerActive }"
         role="button"
         class="navbar-burger"
         aria-label="menu"
         aria-expanded="false"
-        @click="isHamburgerActive = !isHamburgerActive"
       >
         <span aria-hidden="true"></span>
         <span aria-hidden="true"></span>
@@ -16,9 +16,9 @@
       </a>
     </div>
     <div
+      @click="isHamburgerActive = false"
       :class="{ 'is-active': isHamburgerActive }"
       class="navbar-menu"
-      @click="isHamburgerActive = false"
     >
       <div class="navbar-end">
         <nuxt-link class="navbar-item" to="/">{{ articles }}</nuxt-link>

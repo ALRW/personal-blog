@@ -1,6 +1,11 @@
 <template>
   <div>
-    <ProgressiveImage :aspect-ratio="'is-square'" :is-rounded="true" />
+    <ProgressiveImage
+      :aspect-ratio="'is-square'"
+      :alt-text="title"
+      :image-path="image"
+      :is-rounded="true"
+    />
     <div class="has-text-centered">
       <h1 class="is-size-4">{{ title }}</h1>
     </div>

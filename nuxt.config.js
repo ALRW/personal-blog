@@ -29,8 +29,7 @@ export default {
       { charset: 'utf-8' },
       {
         name: 'viewport',
-        content:
-          'width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0'
+        content: 'width=device-width, initial-scale=1.0'
       },
       {
         hid: 'description',
@@ -83,6 +82,7 @@ export default {
     '@nuxtjs/pwa',
     '@nuxtjs/robots',
     '@nuxtjs/sitemap',
+    'nuxt-purgecss',
     'nuxt-webfontloader',
     '@bazzite/nuxt-optimized-images'
   ],

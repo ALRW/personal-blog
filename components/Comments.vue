@@ -1,8 +1,8 @@
 <template>
   <div class="comments">
     <button
-      class="button is-fullwidth comment-button has-text-weight-semibold"
       @click="show = !show"
+      class="button is-fullwidth comment-button has-text-weight-semibold"
     >
       {{ show ? 'Hide Comments' : 'Show Comments' }}
     </button>

@@ -1,7 +1,7 @@
 <template>
   <div :class="blogClass">
     <nuxt-link :to="`articles/${post.path}`">
-      <ProgressiveImage :image-path="post.image" />
+      <ProgressiveImage :alt-text="post.title" :image-path="post.image" />
       <h1 class="title">{{ post.title }}</h1>
       <h1 class="subtitle">{{ post.subtitle }}</h1>
     </nuxt-link>

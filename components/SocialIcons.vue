@@ -2,8 +2,8 @@
   <div class="is-flex social-icons">
     <a class="link-pop" href="https://github.com/ALRW" target="_blank">
       <font-awesome-icon
-        class="has-text-dark"
         :icon="['fab', 'github-square']"
+        class="has-text-dark"
         size="5x"
       />
     </a>
@@ -13,8 +13,8 @@
       target="_blank"
     >
       <font-awesome-icon
-        class="has-text-dark"
         :icon="['fab', 'linkedin']"
+        class="has-text-dark"
         size="5x"
       />
     </a>

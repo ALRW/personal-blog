@@ -3,9 +3,9 @@
     <form @submit.prevent="handleSubmit">
       <div class="honeypot" aria-hidden="true">
         <input
+          @input="handleHoney($event.target.value)"
           type="text"
           name="honey"
-          @input="handleHoney($event.target.value)"
         />
       </div>
       <div v-if="success" class="has-text-centered subscribe-notification">
@@ -17,11 +17,11 @@
       <div class="field is-grouped">
         <div class="control is-expanded">
           <input
+            @input="handleInput($event.target.value)"
             class="input"
             type="email"
             name="email"
             placeholder="my.name@something.com"
-            @input="handleInput($event.target.value)"
           />
         </div>
         <div class="control">
