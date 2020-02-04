@@ -9,36 +9,34 @@ image: /2020-02-03-when-will-it-be-done/estimates.jpg
 One of the most common and frustrating questions to answer in any creative
 endeavour is: “When will it be done?”.
 
-The first reasonable thought that should pop into any rational person’s head on
+The first thought that should pop into any rational person’s head on
 hearing this is probably, “How the hell should I know?”.
 
-However, for some inexplicable reason our evolution has left us predisposed to
-thinking we can easily give an answer.
+However, for some reason our evolution has left us predisposed to
+thinking we can easily give a correct answer.
 
-So now we umm and aah and try to give some pronouncement which, if delivered
+So now we umm and aah and eventually give some pronouncement which, if delivered
 with enough certainty, suddenly, and to our bewilderment, becomes a binding oath
 that we’re expected to fulfil.
 
 ## Why Humans are Awful...at Esimating
 
-It turns out that all of us are pretty terrible at estimating. In fact a number
-of studies have shown this empirically for a number of different reasons.
+It turns out that all of us are empirically terrible at estimating.
 
 First up there’s what’s referred to as the planning fallacy. This is where our
 attention on the task we’re being asked about overrides our ability to take into
-account historical facts that might have given us a better answer. Also by
-focusing solely on estimating the task at hand we become myopic about the
-context. By that I mean that we fail to take into account complications that
-might arise along the way.
+account historical facts that might be relevant. By focusing solely on
+estimating the task at hand we become myopic about the context: we fail to take
+into account complications that might arise along the way.
 
 You’re probably thinking, “Ok, so that’s not great but we can probably account
 for those things.” And you’re right...except there’s one other issue: our
 hardwired optimism bias.
 
 It turns out that for (possibly) evolutionary reasons we underestimate how
-difficult a given task will be and also underestimate how likely it will be that
-we will run into any issues along the way. A great way to think of this is
-Hofstadter’s law:
+difficult a given task will be. We also underestimate how likely it will be that
+we will run into any issues along the way. This is best summarised in
+Hofstadter's law:
 
 >It always takes longer than you expect even when you take into account Hofstadter’s law.
 
@@ -96,7 +94,8 @@ average number of words we’ve written per day and use that to divide the numbe
 of words to write giving us the number of days until we finish.
 
 ```javascript
-const howLong = bookLength / (wordsPerDay.reduce((a,b) => a + b, 0) / wordsPerDay.length)
+const howLong = bookLength /
+  (wordsPerDay.reduce((a,b) => a + b, 0) / wordsPerDay.length)
 // => 205.88235294117646
 ```
 This is a great start but there’s a slight problem. We’ve gone from being
@@ -124,7 +123,12 @@ into ascending order we’ll see that we have a distribution of plausible option
 for when we will be able to finish our work as shown in the code below:
 
 ```javascript
-const runSimulation = (data, bookLength, numberOfSimulations, result =[]) => {
+const runSimulation = (
+  data,
+  bookLength,
+  numberOfSimulations,
+  result =[]
+) => {
   // if there are no more simulations left, give us the results
   if(numberOfSimulations === 0) return result
 
@@ -133,7 +137,10 @@ const runSimulation = (data, bookLength, numberOfSimulations, result =[]) => {
     Math.floor(Math.random() * (distHigh - distLow + 1) + distLow)
 
   // get the highest and lowest value from our data
-  const { 0: distLow, [data.length - 1]: distHigh } = [...data].sort((a,b) => a - b)
+  const {
+    0: distLow,
+    [data.length - 1]: distHigh
+  } = [...data].sort((a,b) => a - b)
 
   // randomly pick how many words we write in a day
   // minus that number from the number of words left to write
@@ -141,13 +148,21 @@ const runSimulation = (data, bookLength, numberOfSimulations, result =[]) => {
   // at the end tell us how many days we took
   const days = (bookLengthRemaining, howLong = 0) => {
     if(bookLengthRemaining <= 0) return howLong
-    return days(bookLengthRemaining - sample(distLow, distHigh), howLong + 1)
+    return days(
+      bookLengthRemaining - sample(distLow, distHigh),
+      howLong + 1
+    )
   }
   
   // add the number of days it took to our results
   // reduce the number of simulations left by one
   // run again until no simulations are left to run
-  return runSimulation(data, bookLength, numberOfSimulations - 1, [...result, days(bookLength)])
+  return runSimulation(
+    data,
+    bookLength,
+    numberOfSimulations - 1,
+    [...result, days(bookLength)]
+  )
 }
 
 // actually run our simulations 10 time and sort the results
