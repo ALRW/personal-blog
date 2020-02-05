@@ -1,25 +1,92 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`BlogCard BlogCard renders correctly 1`] = `"<div class=\\"column is-12 blog-card link-pop\\"><a><progressiveimage-stub aspectratio=\\"is-2by1\\" imagepath=\\"/path/to/image.jpg\\"></progressiveimage-stub> <h1 class=\\"title\\">title</h1> <h1 class=\\"subtitle\\">subtitle</h1></a></div>"`;
+exports[`BlogCard BlogCard renders correctly 1`] = `
+"<div class=\\"column is-12 blog-card link-pop\\"><a>
+    <progressiveimage-stub aspectratio=\\"is-2by1\\" alttext=\\"title\\" imagepath=\\"/path/to/image.jpg\\"></progressiveimage-stub>
+    <h1 class=\\"title\\">title</h1>
+    <h1 class=\\"subtitle\\">subtitle</h1>
+  </a></div>"
+`;
 
-exports[`BlogRoll BlogRoll renders correctly 1`] = `"<section class=\\"section\\"><div class=\\"columns is-multiline\\"><blogcard-stub post=\\"[object Object]\\" index=\\"0\\"></blogcard-stub></div></section>"`;
+exports[`BlogRoll BlogRoll renders correctly 1`] = `
+"<section class=\\"section\\">
+  <div class=\\"columns is-multiline\\">
+    <blogcard-stub post=\\"[object Object]\\" index=\\"0\\"></blogcard-stub>
+  </div>
+</section>"
+`;
 
 exports[`Comments Comments renders correctly 1`] = `
 "<div class=\\"comments\\"><button class=\\"button is-fullwidth comment-button has-text-weight-semibold\\">
     Show Comments
-  </button> <!----></div>"
+  </button>
+  <!---->
+</div>"
 `;
 
-exports[`Footer Footer renders correctly 1`] = `"<footer class=\\"footer\\"><div class=\\"columns is-multiline\\"><div class=\\"column is-6\\"><p>© 2019 Andrew Werner. All rights reserved.</p></div></div></footer>"`;
+exports[`Footer Footer renders correctly 1`] = `
+"<footer class=\\"footer\\">
+  <div class=\\"columns is-multiline\\">
+    <div class=\\"column is-6\\">
+      <p>© 2019 Andrew Werner. All rights reserved.</p>
+    </div>
+    <div class=\\"column is-6 has-text-right-tablet\\"><a class=\\"button is-white\\">
+        Privacy Policy
+      </a></div>
+  </div>
+</footer>"
+`;
 
-exports[`Markdown Markdown renders correctly 1`] = `"<div class=\\"content\\"><div><h1>Hello</h1></div></div>"`;
+exports[`Markdown Markdown renders correctly 1`] = `
+"<div class=\\"content\\">
+  <div>
+    <h1>Hello</h1>
+  </div>
+</div>"
+`;
 
-exports[`Navbar Navbar renders correctly 1`] = `"<nav class=\\"navbar has-shadow\\"><div class=\\"navbar-brand\\"><a class=\\"navbar-item is-size-4\\">Andrew | Werner</a> <a role=\\"button\\" aria-label=\\"menu\\" aria-expanded=\\"false\\" class=\\"navbar-burger\\"><span aria-hidden=\\"true\\"></span> <span aria-hidden=\\"true\\"></span> <span aria-hidden=\\"true\\"></span></a></div> <div class=\\"navbar-menu\\"><div class=\\"navbar-end\\"><a class=\\"navbar-item\\">Articles</a> <a class=\\"navbar-item\\">About Me</a></div></div></nav>"`;
+exports[`Navbar Navbar renders correctly 1`] = `
+"<nav class=\\"navbar has-shadow\\">
+  <div class=\\"navbar-brand\\"><a class=\\"navbar-item is-size-4\\">Andrew | Werner</a> <a role=\\"button\\" aria-label=\\"menu\\" aria-expanded=\\"false\\" class=\\"navbar-burger\\"><span aria-hidden=\\"true\\"></span> <span aria-hidden=\\"true\\"></span> <span aria-hidden=\\"true\\"></span></a></div>
+  <div class=\\"navbar-menu\\">
+    <div class=\\"navbar-end\\"><a class=\\"navbar-item\\">Articles</a> <a class=\\"navbar-item\\">About Me</a></div>
+  </div>
+</nav>"
+`;
 
-exports[`Profile Profile renders correctly 1`] = `"<div><progressiveimage-stub aspectratio=\\"is-square\\" imagepath=\\"/personal-profile.jpg\\" isrounded=\\"true\\"></progressiveimage-stub> <div class=\\"has-text-centered\\"><h1 class=\\"is-size-4\\">title</h1></div></div>"`;
+exports[`Profile Profile renders correctly 1`] = `
+"<div>
+  <progressiveimage-stub aspectratio=\\"is-square\\" alttext=\\"title\\" imagepath=\\"/something.jpg\\" isrounded=\\"true\\"></progressiveimage-stub>
+  <div class=\\"has-text-centered\\">
+    <h1 class=\\"is-size-4\\">title</h1>
+  </div>
+</div>"
+`;
 
-exports[`ProgressiveImage ProgressiveImage renders correctly 1`] = `"<figure class=\\"image is-2by1\\"><div><img data-src=\\"[object Object]\\" data-loading=\\"[object Object]\\" class=\\"\\"></div></figure>"`;
+exports[`ProgressiveImage ProgressiveImage renders correctly 1`] = `
+"<figure class=\\"image is-2by1\\">
+  <div><img data-src=\\"[object Object]\\" data-loading=\\"[object Object]\\" alt=\\"image description\\" class=\\"\\"></div>
+</figure>"
+`;
 
-exports[`SocialIcons SocialIcons renders correctly 1`] = `"<div class=\\"is-flex social-icons\\"><a href=\\"https://github.com/ALRW\\" target=\\"_blank\\" class=\\"link-pop\\"><font-awesome-icon-stub icon=\\"fab,github-square\\" size=\\"5x\\" class=\\"has-text-dark\\"></font-awesome-icon-stub></a> <a href=\\"https://www.linkedin.com/in/wernerandrew\\" target=\\"_blank\\" class=\\"link-pop\\"><font-awesome-icon-stub icon=\\"fab,linkedin\\" size=\\"5x\\" class=\\"has-text-dark\\"></font-awesome-icon-stub></a></div>"`;
+exports[`SocialIcons SocialIcons renders correctly 1`] = `
+"<div class=\\"is-flex social-icons\\"><a href=\\"https://github.com/ALRW\\" target=\\"_blank\\" class=\\"link-pop\\">
+    <font-awesome-icon-stub icon=\\"fab,github-square\\" size=\\"5x\\" class=\\"has-text-dark\\"></font-awesome-icon-stub>
+  </a> <a href=\\"https://www.linkedin.com/in/wernerandrew\\" target=\\"_blank\\" class=\\"link-pop\\">
+    <font-awesome-icon-stub icon=\\"fab,linkedin\\" size=\\"5x\\" class=\\"has-text-dark\\"></font-awesome-icon-stub>
+  </a></div>"
+`;
 
-exports[`Subscribe Subscribe renders correctly 1`] = `"<div class=\\"subscribe\\"><form><div aria-hidden=\\"true\\" class=\\"honeypot\\"><input type=\\"text\\" name=\\"honey\\"></div> <!----> <!----> <div class=\\"field is-grouped\\"><div class=\\"control is-expanded\\"><input type=\\"email\\" name=\\"email\\" placeholder=\\"my.name@something.com\\" class=\\"input\\"></div> <div class=\\"control\\"><button class=\\"button is-dark\\">Subscribe</button></div></div></form></div>"`;
+exports[`Subscribe Subscribe renders correctly 1`] = `
+"<div class=\\"subscribe\\">
+  <form>
+    <div aria-hidden=\\"true\\" class=\\"honeypot\\"><input type=\\"text\\" name=\\"honey\\"></div>
+    <!---->
+    <!---->
+    <div class=\\"field is-grouped\\">
+      <div class=\\"control is-expanded\\"><input type=\\"email\\" name=\\"email\\" placeholder=\\"my.name@something.com\\" class=\\"input\\"></div>
+      <div class=\\"control\\"><button class=\\"button is-dark\\">Subscribe</button></div>
+    </div>
+  </form>
+</div>"
+`;

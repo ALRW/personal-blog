@@ -10,6 +10,9 @@ export default {
   components: {
     BlogRoll
   },
+  data() {
+    return { posts: [] }
+  },
   asyncData() {
     const fileNames = require
       .context('@/markdown/articles/', true, /\.md$/)

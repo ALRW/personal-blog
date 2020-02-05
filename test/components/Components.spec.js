@@ -45,7 +45,8 @@ const components = [
   },
   {
     name: 'Footer',
-    component: Footer
+    component: Footer,
+    options: { stubs: { NuxtLink: RouterLinkStub } }
   },
   {
     name: 'Markdown',
