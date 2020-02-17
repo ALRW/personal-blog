@@ -2,7 +2,7 @@
 title: When Will it be Done?
 author: Andrew Werner
 id: when-will-it-be-done
-subtitle: Overcoming our own limitations
+subtitle: Overcoming our own limitations using the Monte Carlo method
 image: /2020-02-03-when-will-it-be-done/estimates.jpg
 ---
 
