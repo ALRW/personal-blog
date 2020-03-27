@@ -22,6 +22,7 @@
     >
       <div class="navbar-end">
         <nuxt-link class="navbar-item" to="/">{{ articles }}</nuxt-link>
+        <nuxt-link class="navbar-item" to="/talks">{{ talks }}</nuxt-link>
         <nuxt-link class="navbar-item" to="/about">{{ about }}</nuxt-link>
       </div>
     </div>
@@ -34,6 +35,7 @@ export default {
     return {
       title: 'Andrew | Werner',
       articles: 'Articles',
+      talks: 'Talks',
       about: 'About Me',
       isHamburgerActive: false
     }
