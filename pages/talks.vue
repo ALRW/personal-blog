@@ -1,24 +1,51 @@
 <template>
-  <section class="section">
-    <figure class="image is-16by9">
-      <iframe
-        class="has-ratio"
-        width="560"
-        height="315"
-        src="https://www.youtube-nocookie.com/embed/wXqQ8P5NIMk"
-        frameborder="0"
-        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-        allowfullscreen
-      >
-      </iframe>
-    </figure>
-    <h1 class="title">Scaling from Engineer to Engineering Manager</h1>
-    <h3 class="subtitle">
-      How do you move from being an individual contributor to managing
-      individual contributors? How do you even know whether you should make this
-      move? In this talk, given at Acelr8's Talking Talent event, I walk through
-      my approach to these questions and hopefully leave you with a few thoughts
-      designed to make you a better leader whatever your level.
-    </h3>
-  </section>
+  <div>
+    <div v-for="(talk, index) in talks">
+      <section :key="index" class="section">
+        <figure class="image is-16by9">
+          <iframe
+            :src="talk.video"
+            class="has-ratio"
+            width="560"
+            height="315"
+            frameborder="0"
+            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+          >
+          </iframe>
+        </figure>
+        <h1 class="title">{{ talk.title }}</h1>
+        <Markdown :html="talk.html" />
+      </section>
+    </div>
+  </div>
 </template>
+
+<script>
+import Markdown from '@/components/Markdown'
+export default {
+  components: {
+    Markdown
+  },
+  data() {
+    return { talks: [] }
+  },
+  asyncData() {
+    const fileNames = require
+      .context('@/markdown/talks/', true, /\.md$/)
+      .keys()
+      .map((f) => f.slice(2, f.length - 3))
+    async function asyncImport(fileName) {
+      const talk = await import(`@/markdown/talks/${fileName}.md`)
+      return {
+        title: talk.attributes.title,
+        video: talk.attributes.video,
+        html: talk.html
+      }
+    }
+    return Promise.all(
+      fileNames.map((talk) => asyncImport(talk))
+    ).then((res) => ({ talks: res.reverse() }))
+  }
+}
+</script>
