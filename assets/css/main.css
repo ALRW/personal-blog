@@ -17,3 +17,6 @@ li {
   -ms-transform: scale(1.03);
   transform: scale(1.03);
 }
+a {
+  color: inherit !important;
+}
