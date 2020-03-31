@@ -1,31 +1,17 @@
 <template>
   <div>
     <div v-for="(talk, index) in talks">
-      <section :key="index" class="section">
-        <figure class="image is-16by9">
-          <iframe
-            :src="talk.video"
-            class="has-ratio"
-            width="560"
-            height="315"
-            frameborder="0"
-            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-            allowfullscreen
-          >
-          </iframe>
-        </figure>
-        <h1 class="title">{{ talk.title }}</h1>
-        <Markdown :html="talk.html" />
-      </section>
+      <EmbeddedVideo :key="index" :video="talk" />
     </div>
   </div>
 </template>
 
 <script>
-import Markdown from '@/components/Markdown'
+import EmbeddedVideo from '@/components/EmbeddedVideo'
+
 export default {
   components: {
-    Markdown
+    EmbeddedVideo
   },
   data() {
     return { talks: [] }
