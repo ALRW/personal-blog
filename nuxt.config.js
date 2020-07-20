@@ -106,6 +106,7 @@ export default {
     routes: routes()
   },
   build: {
+    extractCSS: true,
     postcss: {
       preset: {
         features: {
