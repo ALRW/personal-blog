@@ -19,7 +19,7 @@ const IndexPage = mount(Index, {
 
 describe('Index Page', () => {
   it('is a vue component', () => {
-    expect(IndexPage.isVueInstance()).toBeTruthy()
+    expect(IndexPage.vm).toBeTruthy()
   })
   it('renders correctly', () => {
     expect(IndexPage.html()).toMatchSnapshot()

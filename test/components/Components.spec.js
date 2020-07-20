@@ -80,7 +80,7 @@ const components = [
 components.forEach(({ name, component, options }) => {
   describe(name, () => {
     it(`${name} is a vue component`, () => {
-      expect(subjectUnderTest(component, options).isVueInstance()).toBeTruthy()
+      expect(subjectUnderTest(component, options).vm).toBeTruthy()
     })
 
     it(`${name} renders correctly`, () => {

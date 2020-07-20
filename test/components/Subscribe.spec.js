@@ -11,14 +11,14 @@ describe('Subscribe', () => {
     wrapper.setData({ success: true })
     await Vue.nextTick()
     const node = wrapper.find('[icon="far,check-circle"]')
-    expect(node.is('font-awesome-icon-stub')).toBe(true)
+    expect(node.isVisible()).toBe(true)
   })
   it('if error is shows an error icon', async () => {
     const wrapper = subjectUnderTest(Subscribe)
     wrapper.setData({ error: true })
     await Vue.nextTick()
     const node = wrapper.find('[icon="far,times-circle"]')
-    expect(node.is('font-awesome-icon-stub')).toBe(true)
+    expect(node.isVisible()).toBe(true)
   })
   it('successfully submits an email', async () => {
     const wrapper = subjectUnderTest(Subscribe)
@@ -29,7 +29,7 @@ describe('Subscribe', () => {
     wrapper.vm.handleSubmit()
     await Vue.nextTick()
     const node = wrapper.find('[icon="far,check-circle"]')
-    expect(node.is('font-awesome-icon-stub')).toBe(true)
+    expect(node.isVisible()).toBe(true)
   })
   it('does nothing if anything is entered into the honeypot', () => {
     const wrapper = subjectUnderTest(Subscribe)
