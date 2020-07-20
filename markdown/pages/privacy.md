@@ -6,16 +6,17 @@ This should hopefully be short and simple.
 
 ### Cookies
 
-I use google analytics (and therefore cookies) to understand how you are using
-this site. Specifically, I want to see what articles etc. you like so I can
-write more of them. If you would like more information about cookies you can
-find it at [All-About-Cookies](https://allaboutcookies.org)
+I tried google analytics for a little while and it was just too heavy-weight
+and invasive for what I'm doing here. So there's no tracking, no cookies, and
+I don't intend to change that.
 
 ### Data Collection
 
-I also use MailChimp to manage the list of people who would like to hear about
+I use MailChimp to manage the list of people who would like to hear about
 future articles I write. The only data I hold through mailchimp is your email
-address if you have entered it in the subscribe form. Every email you are sent
+address if you have entered it in the subscribe form. By doing so you consent
+to me using your email only for the purpose of sending you emails containing
+information related to new content I have written. Every email you are sent
 will contain a link to unsubscribe from the mailing list if you no longer wish
 to hear from me.
 
