@@ -78,7 +78,6 @@ export default {
     '@nuxtjs/pwa',
     '@nuxtjs/robots',
     '@nuxtjs/sitemap',
-    'nuxt-purgecss',
     'nuxt-webfontloader',
     '@bazzite/nuxt-optimized-images'
   ],
