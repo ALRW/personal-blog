@@ -17,8 +17,7 @@ I write about a range of subjects but focus heavily on all aspects of
 leadership.
 
 If you would like to see more of my writing please just enter your email below
-and i'll be in touch whenever I have something of value to share (Usually about
-once a month).
+and i'll be in touch whenever I have something of value to share.
 
 Alternatively, if you'd like to see some of my work or connect with me below are
 links to my LinkedIn and Github profiles.
