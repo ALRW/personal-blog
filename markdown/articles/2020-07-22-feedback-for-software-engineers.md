@@ -7,15 +7,15 @@ image: /2020-07-22-feedback-for-software-engineers/feedback.jpg
 ---
 
 Often, when a manager leaves a team or company they can take the history of
-their teams, the  individuals within those teams and what was achieved together
-with them. This is particularly acute when it comes to the infamous annual
-review. It’s not unheard of for an engineer to receive a yearly appraisal based
-wholly on the previous three weeks of work under a new manager.
+their teams and what was achieved together with them. This is particularly acute
+when it comes to the infamous annual review. It’s not unheard of for an engineer
+to receive a yearly appraisal based wholly on the previous three weeks of work
+under a new manager.
 
 During my final few weeks at Funding Circle, in a bid to do something about
-this, I sat down and wrote a short page - few paragraphs for each of the
-engineers that I had been managing, summarising their contributions and also
-adding some more far-sighted feedback that I hoped might be of use.
+this, I sat down and wrote a short page for each of the engineers that I had
+been managing, summarising their contributions and also adding some more
+far-sighted feedback that I hoped might be of use.
 
 I wanted to make this as useful an exercise as possible so, in each case, I
 tried to set aside time to think deeply about the person to target my advice
@@ -44,7 +44,7 @@ Specifically, when you experience any of the above as a junior engineer (or as
 a new employee in an unfamiliar environment) you need to have a conversation
 with someone who can remove the reason for your anxiety. Which, most often, is
 because you lack knowledge that they have. Fear is offering you a path to grow
-by developing a relationship with one of your colleagues in a genuine way and
+by developing a relationship with one of your colleagues in a genuine way and 
 through the acquisition of knowledge that will instantly make you a more
 experienced engineer.
 
