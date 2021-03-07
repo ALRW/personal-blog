@@ -9,9 +9,8 @@ adventuring as an army officer, learning as a founder, building as a software
 engineer and throughout it all trying to listen to, learn from, and, when given
 the priviledge, lead those I was fortunate enough to spend my time with.
 
-I now work as an engineering manager at [Stripe](https://stripe.com)
-helping small businesses and savers find a mutually beneficial way to grow
-financially.
+I now work as an engineering manager at [Stripe](https://stripe.com) helping to
+bring digital payments to new part of the world.
 
 I write about a range of subjects but focus heavily on all aspects of
 leadership.
